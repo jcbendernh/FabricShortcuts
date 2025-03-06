@@ -60,7 +60,7 @@ Zach Christoff has no access to the Curated Workspace.  He is not listed under M
 
 ### Step 4 - Assign Custom Role access on the Target Lakehouse
 
-1. In the Gold Lakehouse in the Curated Workspace, go to Manage OneLake data access (preview)
+1. In the Gold Lakehouse in the Curated Workspace, go to <b>Manage OneLake data access (preview)</b>.
 2. Click <b>+ New role</b> and do the following…<br>
    a. Role Name – <b>ReadNwdCust</b> <br>
    b. Under <b>Selected folders</b> choose the <b>NorthwindCustomers</b> table.<br>
