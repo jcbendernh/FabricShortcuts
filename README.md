@@ -14,7 +14,7 @@ It is also important to note, that when utilizing a medallion Lakehouse model, w
 
 Depending on your scenario, you may need to deviate from this but this is a good place to get started and then adjust as needed.
 
-# Scenario
+# Scenario 1 (Lakehouse without Schema enabled)
 ## Overview
 Zach Christoff is a Fabric user who need access to only specific tables that reside the in the Curated Workspace.  We want to create a separate workspace and allow him to access only a few tables.
 
@@ -58,7 +58,7 @@ Zach Christoff has no access to the Curated Workspace.  He is not listed under M
 2. Open the <b>DefaultReader</b> role and click the <b>Assign Role</b> button and ensure that Zach Christoff is not listed under Assigned users.<BR>
 ![Step 3](./img/step3.png)
 
-### Step 4 - Assign Custom Role access on the Target Lakehouse
+### Step 4 - Assign Custom Role access on the Target Lakehouse {#step4}
 
 1. In the Gold Lakehouse in the Curated Workspace, go to Manage OneLake data access (preview)
 2. Click <b>+ New role</b> and do the following…<br>
@@ -71,7 +71,7 @@ Zach Christoff has no access to the Curated Workspace.  He is not listed under M
    ![Step 4](./img/step4b.png)
 5. Click Save
 
-### Step 5 - Create the Shortcut in the Shortcut Path workspace
+### Step 5 - Create the Shortcut in the Shortcut Path workspace {#step5}
 
 1. <b>Prerequisite</b>: Zach Christoff user has Contributor access to the US Partners workspace.  (Shortcut Path)
 2. Logged in as Zach Christoff, go to the <b>Partner</b> Lakehouse in the <b>US Partners</b> workspace. (Shortcut Path)
@@ -88,6 +88,46 @@ By default, users will still see all the tables in the target Lakehouse via the 
     ![Step 6](./img/step6a.png)
 2. After the DENY script is executed, the user only sees the <b>NorthwindCustomers</b> table on the target lakehouse.  <BR>
     ![Step 6](./img/step6b.png)
+
+
+# Scenario 2 (Lakehouse with Schema enabled)
+We had another customer ask about applying the steps above to a Lakehouse with Schema enabled in the Target Path.
+
+Thus, for this scenario, we want to only allow access to the Products, Shippers and Suppliers tables.
+
+## Scenario Tested
+
+<b>Target Path</b>
+-	Workspace = Schema
+-	Lakehouse = Northwind (schema enabled)
+
+    ![Target Path](./img/targetpath.png)
+
+<b>Shortcut Path</b> 
+-	Workspace = Shortcut Schema Workspace
+-	Lakehouse = NwdShortcut (schema enabled)
+
+    ![Shortcut Path](./img/shortcutpath.png)
+
+<b> Users Tested With </b>
+Jack Bender – Workspace Admin on both workspaces<br>
+John Bender – Native AD user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
+Jack Bender MSFT – B2B user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
+
+All steps in the previous section were followed.  Below are a couple of items to note for a schema enabled Lakehouse and what I experienced during setup and testing.
+
+For [Step 4](#step4), items 3-5, it showed that my Jack Bender MSFT had <B>Permissions = None</b>.  This was a <b>false negative</b>.  Ignore this.<BR>&nbsp;<BR>
+    ![Permissions None](./img/permissions-none.png)
+
+<B>IMPORTANT:</B>  This role only gives them access to the following tables…
+<BR>&nbsp;<BR>
+    ![ReadNwd](./img/readnwd.png)
+
+On [Step 5](#step4), Jack Bender (Admin User) created the shortcut.  Instead of picking individual tables, I shared the entire schema by selecting only the schema folder.  This did not alter security as the users can only see Products, Shippers and Suppliers as seen in the screenshot below as Jack Bender MSFT (B2B Guest User) after the shortcut was created.
+<BR>&nbsp;<BR>
+    ![ReadNwdShortcut](./img/nwdshortcut.png)
+
+<b>NOTE</b>:  Shortcut icon appears on the schema, not the tables.   Also, do not create the schema ahead of time on the Shortcut Path Lakehouse, this will cause issues, especially if the schemas are the same name.
 
 
 
