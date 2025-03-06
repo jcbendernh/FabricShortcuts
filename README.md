@@ -6,7 +6,7 @@ The purpose of this repository is to offer guidance / instruction on how to secu
 
 This scenario came up repeatedly across customers and we decided to publicly document the steps we have taken to achieve this scenario.
 
-It is also important to note, that when utilizing a medallion Lakehouse model, we also recommend not putting everything in one workspace.  A good foundation to work with is the following...
+It is also important to note, that when utilizing a [Lakehouse Medallion Architecture](https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture), we also recommend not putting everything in one workspace.  A good foundation to work with is the following...
 
 ![Workspace Best Practices](./img/wrkspcbest1.png)
 
