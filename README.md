@@ -42,8 +42,41 @@ Zach Christoff has no access to the Curated Workspace.  He is not listed under M
 
 ### Step 2 - Read Access on the Lakehouse in the Target Path
 
-1. In the workspace item listing, find the Gold Lakehouse and click on the ellipses/more options and select Manage Permissions <BR>
+1. In the workspace item listing, find the Gold Lakehouse and click on the <b>ellipses/more options</b> and select <b>Manage Permissions</b><BR>
 ![Step 2](./img/step2.png)
+
+2. Click <b>Add User</b> and select user and give them only <b>Read all SQL endpoint data</b>.<BR>
+![Step 2](./img/step2b.png)
+
+3. The user should show in the listing with Read Permissions.<BR>
+![Step 2](./img/step2c.png)
+
+
+### Step 3 - Ensure the User does not have access to the target Lakehouse
+
+1. In the Gold Lakehouse in the Curated Workspace, go to <b>Manage OneLake data access (preview)</b>.
+2. Open the <b>DefaultReader</b> role and click the <b>Assign Role</b> button and ensure that Zach Christoff is not listed under Assigned users.<BR>
+![Step 3](./img/step3.png)
+
+### Step 4 - Assign Custom Role access on the Target Lakehouse
+
+1. In the Gold Lakehouse in the Curated Workspace, go to Manage OneLake data access (preview)
+2. Click <b>+ New role</b> and do the following…<br>
+   a. Role Name – <b>ReadNwdCust</b> <br>
+   b. Under <b>Selected folders</b> choose the <b>NorthwindCustomers</b> table.<br>
+   c. Click Save<br>
+   ![Step 4](./img/step4.png)
+3. Click <b>Assign role</b>.
+4. On the assign screen, add the user from <b>Add people or groups</b> not the ~~Add users based on Lakehouse permissions~~.  When finished, it should look like the following...<BR>
+   ![Step 4](./img/step4b.png)
+5. Click Save
+
+
+
+
+
+
+
 
 
 
