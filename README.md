@@ -58,7 +58,7 @@ Zach Christoff has no access to the Curated Workspace.  He is not listed under M
 2. Open the <b>DefaultReader</b> role and click the <b>Assign Role</b> button and ensure that Zach Christoff is not listed under Assigned users.<BR>
 ![Step 3](./img/step3.png)
 
-### Step 4 - Assign Custom Role access on the Target Lakehouse {#step4}
+### Step 4 - Assign Custom Role access on the Target Lakehouse
 
 1. In the Gold Lakehouse in the Curated Workspace, go to Manage OneLake data access (preview)
 2. Click <b>+ New role</b> and do the following…<br>
@@ -71,7 +71,7 @@ Zach Christoff has no access to the Curated Workspace.  He is not listed under M
    ![Step 4](./img/step4b.png)
 5. Click Save
 
-### Step 5 - Create the Shortcut in the Shortcut Path workspace {#step5}
+### Step 5 - Create the Shortcut in the Shortcut Path workspace
 
 1. <b>Prerequisite</b>: Zach Christoff user has Contributor access to the US Partners workspace.  (Shortcut Path)
 2. Logged in as Zach Christoff, go to the <b>Partner</b> Lakehouse in the <b>US Partners</b> workspace. (Shortcut Path)
@@ -116,14 +116,14 @@ Jack Bender MSFT – B2B user with no workspace access to the Schema and Contrib
 
 All steps in the previous section were followed.  Below are a couple of items to note for a schema enabled Lakehouse and what I experienced during setup and testing.
 
-For [Step 4](#step-4---assign-custom-role-access-on-the-target-lakehouse-step4), items 3-5, it showed that my Jack Bender MSFT had <B>Permissions = None</b>.  This was a <b>false negative</b>.  Ignore this.<BR>&nbsp;<BR>
+For [Step 4](#step-4---assign-custom-role-access-on-the-target-lakehouse), items 3-5, it showed that my Jack Bender MSFT had <B>Permissions = None</b>.  This was a <b>false negative</b>.  Ignore this.<BR>&nbsp;<BR>
     ![Permissions None](./img/permissions-none.png)
 
 <B>IMPORTANT:</B>  This role only gives them access to the following tables…
 <BR>&nbsp;<BR>
     ![ReadNwd](./img/readnwd.png)
 
-On [Step 5](#step-5---create-the-shortcut-in-the-shortcut-path-workspace-step5), Jack Bender (Admin User) created the shortcut.  Instead of picking individual tables, I shared the entire schema by selecting only the schema folder.  This did not alter security as the users can only see Products, Shippers and Suppliers as seen in the screenshot below as Jack Bender MSFT (B2B Guest User) after the shortcut was created.
+On [Step 5](#step-5---create-the-shortcut-in-the-shortcut-path-workspace), Jack Bender (Admin User) created the shortcut.  Instead of picking individual tables, I shared the entire schema by selecting only the schema folder.  This did not alter security as the users can only see Products, Shippers and Suppliers as seen in the screenshot below as Jack Bender MSFT (B2B Guest User) after the shortcut was created.
 <BR>&nbsp;<BR>
     ![ReadNwdShortcut](./img/nwdshortcut.png)
 
