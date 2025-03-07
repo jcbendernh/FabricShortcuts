@@ -30,7 +30,7 @@ Zach Christoff is a Fabric user who need access to only specific tables that res
 This aligns with the nomenclature at [Secure and manage OneLake shortcuts - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcut-security)<
 
 ## Steps Overview
-1. Zach has <b>no Workspace Access </b>in the Target Path
+1. Zach has <b>no Workspace Access </b>in the Target Path.
 2. Zach has <b>Read All SQL Endpoint Data</b> on the Lakehouse in the Target Path.  This allows him to query from the SQL Analytics Endpoint.
 3. Ensure that Zach does not have the <b>DefaultReader role</b> on the Target Lakehouse.  By removing this, Zach cannot read the Lakehouse tables.
 4. Create a <b>Custom Role with limited Read access</b> on the Target Lakehouse via <b>Manage OneLake data access</b> and assigned Zach that custom role.  This allows Zach to only see the necessary tables.
@@ -38,14 +38,14 @@ This aligns with the nomenclature at [Secure and manage OneLake shortcuts - Micr
 6. <b>DENY SELECT</b> on the restricted Target Lakehouse tables via the SQL Analytics Endpoint so Zach cannot view them via the SQL Analytics Endpoint.   
 
 ### Step 1 - User Has No Workspace Access in the Target Path
-Zach Christoff has no access to the Curated Workspace.  He is not listed under Manage Access on that Workspace
+Zach Christoff has no access to the Curated Workspace (Target Path). He is not listed under <b>Manage Access</b> on that Workspace
 
 ### Step 2 - Read Access on the Lakehouse in the Target Path
 
-1. In the workspace item listing, find the Gold Lakehouse and click on the <b>ellipses/more options</b> and select <b>Manage Permissions</b><BR>
+1. In the workspace item listing, find the Gold Lakehouse and click on the <b>ellipses/more options</b> and select <b>Manage Permissions.</b><BR>
 ![Step 2](./img/step2.png)
 
-2. Click <b>Add User</b> and select user and give them only <b>Read all SQL endpoint data</b>.<BR>
+2. Click <b>Add User</b> and select the user and give them only <b>Read all SQL endpoint data</b>.<BR>
 ![Step 2](./img/step2b.png)
 
 3. The user should show in the listing with Read Permissions.<BR>
@@ -80,7 +80,9 @@ Zach Christoff has no access to the Curated Workspace.  He is not listed under M
 4. In the <b>New Shortcut</b> window, select <b>Microsoft OneLake</b>.
 5. Select the <b>Gold Lakehouse</b> in the <b>Curated Sandbox</b> workspace and click Next  (Target Path)
 6. Expand tables and Zach should only see <b>NorthwindCustomers</b>, select it and click Next and Create.<BR>
-    ![Step 5](./img/step5b.png)
+    ![Step 5](./img/step5b.png)<BR>
+
+<b>NOTE:</b> This could have been done by the Admin user.  For this example we just showed it as the business user.
 
 ### Step 6 – DENY SELECT on the Lakehouse tables via the SQL Analytics Endpoint on the Target Lakehouse.
 By default, users will still see all the tables in the target Lakehouse via the SQL Endpoint.  
