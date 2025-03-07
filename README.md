@@ -100,19 +100,19 @@ Thus, for this scenario, we want to only allow access to the Products, Shippers 
 
 ## Scenario Tested
 
-<b>Target Path</b>
+### Target Path</b>
 -	Workspace = Schema
 -	Lakehouse = Northwind (schema enabled)
 
     ![Target Path](./img/targetpath.png)
 
-<b>Shortcut Path</b> 
+### Shortcut Path</b> 
 -	Workspace = Shortcut Schema Workspace
 -	Lakehouse = NwdShortcut (schema enabled)
 
     ![Shortcut Path](./img/shortcutpath.png)
-<
-<b> Users Tested With </b><BR>
+
+### Users Tested With </b><BR>
 Jack Bender – Workspace Admin on both workspaces<br>
 John Bender – Native AD user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
 Jack Bender MSFT – B2B user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
