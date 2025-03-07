@@ -10,7 +10,7 @@ It is also important to note, that when utilizing a [Lakehouse Medallion Archite
 
 ![Workspace Best Practices](./img/wrkspcbest2.png)
 
-Depending on your scenario, you may need to deviate from this, but this is a good foundation to work with and adjust as needed.
+Depending on your scenario, you may need to deviate from this, but this is a good framework to start with.
 
 Contributors to this repo are [Zachary Christoff](https://www.linkedin.com/in/zach-christoff-485b7466/) and myself.  Also a wicked big thanks goes out to [Matt Witman](https://www.linkedin.com/in/matt-witman-2280b337/) and [Tyler Chessman](https://www.linkedin.com/in/tyler-chessman/) for their input as well.
 
