@@ -26,14 +26,14 @@ Zach Christoff is a Fabric user who need access to only specific tables that res
 
 ## Glossary
 <B>Target path</B>: The location that a shortcut points to.<BR>
-<B>Shortcut path</B>: The location where the shortcut appears
+<B>Shortcut path</B>: The location where the shortcut appears.<BR>
 This aligns with the nomenclature at [Secure and manage OneLake shortcuts - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcut-security)<
 
 ## Steps Overview
 1. Zach has <b>no Workspace Access </b>in the Target Path
 2. Zach has <b>Read All SQL Endpoint Data</b> on the Lakehouse in the Target Path.  This allows him to query from the SQL Analytics Endpoint.
-3. Ensure that Zach does not have the <b>DefaultReader role</b> on the target Lakehouse.  By removing this, Zach cannot read the Lakehouse tables.
-4. Create a <b>Custom Role with limited Read access</b> on the Target Lakehouse via <b>Manage OneLake data access</b> and assigned Zach that role.  This allows Zach to only see the tables we want him to see.
+3. Ensure that Zach does not have the <b>DefaultReader role</b> on the Target Lakehouse.  By removing this, Zach cannot read the Lakehouse tables.
+4. Create a <b>Custom Role with limited Read access</b> on the Target Lakehouse via <b>Manage OneLake data access</b> and assigned Zach that custom role.  This allows Zach to only see the necessary tables.
 5. Zach <b>creates the Shortcut</b> in the Shortcut Path workspace.  
 6. <b>DENY SELECT</b> on the restricted Target Lakehouse tables via the SQL Analytics Endpoint so Zach cannot view them via the SQL Analytics Endpoint.   
 
