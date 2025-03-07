@@ -96,28 +96,27 @@ NOTE:  This is done to ensure that the users do not try to see more than they sh
 # Scenario 2 (Lakehouse with Schema enabled)
 We had another customer ask about applying the steps above to a Lakehouse with Schema enabled in the Target Path.
 
+## Scenario Overview
 Thus, for this scenario, we want to only allow access to the Products, Shippers and Suppliers tables.  The screenshots below are from a separate environment so the Lakehouse and table names are different.
 
-## Scenario Tested
-
-### Target Path</b>
+## Target Path</b>
 -	Workspace = Schema
 -	Lakehouse = Northwind (schema enabled)
 
     ![Target Path](./img/targetpath.png)
 
-### Shortcut Path</b> 
+## Shortcut Path</b> 
 -	Workspace = Shortcut Schema Workspace
 -	Lakehouse = NwdShortcut (schema enabled)
 
     ![Shortcut Path](./img/shortcutpath.png)
 
-### Users Tested With </b><BR>
+## Users Tested With </b><BR>
 Jack Bender – Workspace Admin on both workspaces<br>
 John Bender – Native AD user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
 Jack Bender MSFT – B2B user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
 
-All steps in the previous section were followed.  Below are a couple of items to note for a schema enabled Lakehouse and what I experienced during setup and testing.
+<b>All steps in the previous section were followed.  Below are a couple of items to note for a schema enabled Lakehouse and what I experienced during setup and testing.</b>
 
 For [Step 4](#step-4---assign-custom-role-access-on-the-target-lakehouse), items 3-5, it showed that my Jack Bender MSFT had <B>Permissions = None</b>.  This was a <b>false negative</b>.  Ignore this.<BR>&nbsp;<BR>
     ![Permissions None](./img/permissions-none.png)
