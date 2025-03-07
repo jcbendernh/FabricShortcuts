@@ -16,13 +16,13 @@ Contributors to this repo are [Zachary Christoff](https://www.linkedin.com/in/za
 
 # Scenario 1 (Lakehouse without Schema enabled)
 ## Overview
-Zach Christoff is a Fabric user who need access to only specific tables that reside the in the Curated Workspace.  We want to create a separate workspace and allow him to access only a few tables.
+Zach Christoff is a Fabric user who need access to only specific tables that reside the in the Curated Workspace.  We want to create a separate workspace and allow him to access only the <b>NorthwindCustomers</b> table.
 
 ![Scenario Overview](./img/scenariooverview.png)
 
 ## Users Involved 
 <B>Jack Bender</B> – Admin User, is Admin in both workspaces<br>
-<B>Zach Christoff</B> - Business User, no admin rights, only has access the US Partners workspace.
+<B>Zach Christoff</B> - Business User, no admin rights, only has Contributor access the US Partners workspace.
 
 ## Glossary
 <B>Target path</B>: The location that a shortcut points to.<BR>
