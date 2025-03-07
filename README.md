@@ -96,7 +96,7 @@ NOTE:  This is done to ensure that the users do not try to see more than they sh
 # Scenario 2 (Lakehouse with Schema enabled)
 We had another customer ask about applying the steps above to a Lakehouse with Schema enabled in the Target Path.
 
-Thus, for this scenario, we want to only allow access to the Products, Shippers and Suppliers tables.
+Thus, for this scenario, we want to only allow access to the Products, Shippers and Suppliers tables.  The screenshots below are from a separate environment so the Lakehouse and table names are different.
 
 ## Scenario Tested
 
@@ -111,8 +111,8 @@ Thus, for this scenario, we want to only allow access to the Products, Shippers 
 -	Lakehouse = NwdShortcut (schema enabled)
 
     ![Shortcut Path](./img/shortcutpath.png)
-
-<b> Users Tested With </b>
+<
+<b> Users Tested With </b><BR>
 Jack Bender – Workspace Admin on both workspaces<br>
 John Bender – Native AD user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
 Jack Bender MSFT – B2B user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
