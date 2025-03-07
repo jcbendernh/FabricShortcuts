@@ -113,8 +113,8 @@ Thus, for this scenario, we want to only allow access to the Products, Shippers 
 
 ## Users Tested With </b><BR>
 Jack Bender – Workspace Admin on both workspaces<br>
-John Bender – Native AD user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
-Jack Bender MSFT – B2B user with no workspace access to the Schema and Contributor on the Shortcuts Schema workspace.<br>
+John Bender – Native AD user with no workspace access to the Schema workspace (Target Path) and Contributor on the Shortcuts Schema workspace (Shortcut Path).<br>
+Jack Bender MSFT – B2B/Guest user with no workspace access to the Schema workspace (Target Path) and Contributor on the Shortcuts Schema workspace (Shortcut Path).<br>
 
 <b>All steps in the previous section were followed.  Below are a couple of items to note for a schema enabled Lakehouse and what I experienced during setup and testing.</b>
 
