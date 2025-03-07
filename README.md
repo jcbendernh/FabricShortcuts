@@ -1,16 +1,16 @@
 # Introduction
 
-The purpose of this repository is to offer guidance / instruction on how to secure specific tables in a Fabric Lakehouse so that a subset of users can access only those tables and not have access to entire Lakehouse on the Target Path.
+The purpose of this repository is to offer guidance / instruction on how to secure specific tables in a Fabric Lakehouse so that a subset of users can access only those tables and not have access to entire Lakehouse on the Target Path.  These instructions apply both to Lakehouse via Spark workloads and the SQL Analytics Endpoint.
 
-This scenario came up repeatedly across customers and we decided to publicly document the steps we have taken to achieve this scenario.
+This scenario came up repeatedly across customers and we decided to publicly document the steps we have established to achieve this scenario.
 
-It is also important to note, that when utilizing a [Lakehouse Medallion Architecture](https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture), we also recommend separating assets across workspaces and only allowing the business uers in the Curated Workspace.  A good foundation to work with is the following...
+It is also important to note, that when utilizing a [Lakehouse Medallion Architecture](https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture), we recommend separating assets across workspaces and only allowing the business users in the Curated Workspace.  A good foundation to work with is the following...
 
 ![Workspace Best Practices](./img/wrkspcbest1.png)
 
 ![Workspace Best Practices](./img/wrkspcbest2.png)
 
-Depending on your scenario, you may need to deviate from this but this is a good place to get started and then adjust as needed.
+Depending on your scenario, you may need to deviate from this, but this is a good foundation to work with and adjust as needed.
 
 Contributors to this repo are [Zachary Christoff](https://www.linkedin.com/in/zach-christoff-485b7466/) and myself.  Also a wicked big thanks goes out to [Matt Witman](https://www.linkedin.com/in/matt-witman-2280b337/) and [Tyler Chessman](https://www.linkedin.com/in/tyler-chessman/) for their input as well.
 
