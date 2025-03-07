@@ -81,15 +81,16 @@ Zach Christoff has no access to the Curated Workspace (Target Path). He is not l
 5. Select the <b>Gold Lakehouse</b> in the <b>Curated Sandbox</b> workspace and click Next  (Target Path)
 6. Expand tables and Zach should only see <b>NorthwindCustomers</b>, select it and click Next and Create.<BR>
     ![Step 5](./img/step5b.png)<BR>
-
 <b>NOTE:</b> This could have been done by the Admin user.  For this example we just showed it as the business user.
 
 ### Step 6 – DENY SELECT on the Lakehouse tables via the SQL Analytics Endpoint on the Target Lakehouse.
 By default, users will still see all the tables in the target Lakehouse via the SQL Endpoint.  
-1. To restrict their table access, connect to the SQL Analytics Endpoint of the Lakehouse and ran the SQL Deny Statement Below.<BR>
+1. To restrict their table access, connect to the SQL Analytics Endpoint of the Lakehouse and run the SQL DENY script below.<BR>
     ![Step 6](./img/step6a.png)
-2. After the DENY script is executed, the user only sees the <b>NorthwindCustomers</b> table on the target lakehouse.  <BR>
-    ![Step 6](./img/step6b.png)
+2. Aft<er the DENY script is executed, the user only sees the <b>NorthwindCustomers</b> table on the target lakehouse.  <BR>
+    ![Step 6](./img/step6b.png)<BR>
+
+NOTE:  This is done to ensure that the users do not try to see more than they should on the Target Lakehouse.
 
 
 # Scenario 2 (Lakehouse with Schema enabled)
