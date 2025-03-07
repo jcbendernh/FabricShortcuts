@@ -116,20 +116,20 @@ Jack Bender – Workspace Admin on both workspaces<br>
 John Bender – Native AD user with no workspace access to the Schema workspace (Target Path) and Contributor on the Shortcuts Schema workspace (Shortcut Path).<br>
 Jack Bender MSFT – B2B/Guest user with no workspace access to the Schema workspace (Target Path) and Contributor on the Shortcuts Schema workspace (Shortcut Path).<br>
 
-<b>All steps in the previous section were followed.  Below are a couple of items to note for a schema enabled Lakehouse and what I experienced during setup and testing.</b>
+<b>All steps in the previous section were followed.  Below are a couple of items to note for a schema enabled Lakehouse and what we experienced during setup and testing.</b>
 
-For [Step 4](#step-4---assign-custom-role-access-on-the-target-lakehouse), items 3-5, it showed that my Jack Bender MSFT had <B>Permissions = None</b>.  This was a <b>false negative</b>.  Ignore this.<BR>&nbsp;<BR>
+For [Step 4](#step-4---assign-custom-role-access-on-the-target-lakehouse), items 3-5, it showed that my Jack Bender MSFT had <B>Permissions = None</b>.  This was a <b>false positive</b>.  Ignore this.<BR>&nbsp;<BR>
     ![Permissions None](./img/permissions-none.png)
 
 <B>IMPORTANT:</B>  This role only gives them access to the following tables…
 <BR>&nbsp;<BR>
     ![ReadNwd](./img/readnwd.png)
 
-On [Step 5](#step-5---create-the-shortcut-in-the-shortcut-path-workspace), Jack Bender (Admin User) created the shortcut.  Instead of picking individual tables, I shared the entire schema by selecting only the schema folder.  This did not alter security as the users can only see Products, Shippers and Suppliers as seen in the screenshot below as Jack Bender MSFT (B2B Guest User) after the shortcut was created.
+On [Step 5](#step-5---create-the-shortcut-in-the-shortcut-path-workspace), Jack Bender (Admin User) created the shortcut.  Instead of picking individual tables, I shared the entire schema by selecting only the schema folder.  This did not alter security as the users can only see Products, Shippers and Suppliers as seen in the screenshot below as Jack Bender MSFT (B2B/Guest User) after the shortcut was created.
 <BR>&nbsp;<BR>
     ![ReadNwdShortcut](./img/nwdshortcut.png)
 
-<b>NOTE</b>:  Shortcut icon appears on the schema, not the tables.   Also, do not create the schema ahead of time on the Shortcut Path Lakehouse, this will cause issues, especially if the schemas are the same name.
+<b>NOTE</b>:  The shortcut icon appears only on the schema, not the tables.   Also, do not create the schema with the same name ahead of time on the Shortcut Path Lakehouse, this will cause issues.
 
 
 
